@@ -1,0 +1,17 @@
+'use client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/scan');
+  }, [router]);
+
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <p className="text-xl">正在跳转到扫码页面...</p>
+    </div>
+  );
+}

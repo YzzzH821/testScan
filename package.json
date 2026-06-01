@@ -1,0 +1,52 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "description": "兼职考勤系统",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "next dev --experimental-https --experimental-https-key key.pem --experimental-https-cert cert.pem -p 3000 --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@zxing/browser": "^0.1.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.344.0",
+    "next": "14.1.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.3",
+    "postcss": "^8",
+    "prisma": "^5.10.2",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "prisma": {
+    "seed": "ts-node --esm prisma/seed.ts"
+  }
+}
